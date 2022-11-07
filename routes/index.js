@@ -20,7 +20,7 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'BackendTeamB' });
 });
 
-router.get('/dvd/all/:location', (req, res, next) => {
+router.get('/DVDs/all/:location', (req, res, next) => {
 
   const param = req.params.location;
   console.log('got into dvd/all/:location ' + param);
@@ -48,7 +48,7 @@ router.get('/dvd/all/:location', (req, res, next) => {
 
 
 
-router.get('/dvd/team', (req, res, next) => {
+router.get('/DVDs/team', (req, res, next) => {
   let result = {"team": "DVD", "membersNames":["Aravindhan", "Pooja", "Pratik","Nandana"]};
   res.setHeader('content-type', 'application/json');
   res.end(JSON.stringify(result));
